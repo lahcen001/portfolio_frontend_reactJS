@@ -3,7 +3,7 @@ import "./About.scss";
 import { motion } from "framer-motion";
 import { images } from "../../constants";
 import { urlFor, client } from "../../client";
-
+import { AppWrap } from "../../wrapper";
 // const abouts = [
 //   {
 //     title: "Web development",
@@ -26,6 +26,7 @@ import { urlFor, client } from "../../client";
 //     imgUrl: images.about04,
 //   },
 // ];
+ 
 function About() {
   const [about, setAbout] = useState([]);
 
@@ -68,4 +69,4 @@ function About() {
   );
 }
 
-export default About;
+export default AppWrap(About, "about");
