@@ -3,7 +3,7 @@ import "./About.scss";
 import { motion } from "framer-motion";
 import { images } from "../../constants";
 import { urlFor, client } from "../../client";
-import { AppWrap } from "../../wrapper";
+import { AppWrap, MotionWrap } from "../../wrapper";
 // const abouts = [
 //   {
 //     title: "Web development",
@@ -26,7 +26,7 @@ import { AppWrap } from "../../wrapper";
 //     imgUrl: images.about04,
 //   },
 // ];
- 
+
 function About() {
   const [about, setAbout] = useState([]);
 
@@ -49,7 +49,7 @@ function About() {
       <div className="app__profiles">
         {about.map((about, index) => (
           <motion.div
-            whileInVie={{ opacity: 1 }}
+            whileInView={{ opacity: 1 }}
             whileHover={{ scale: 1.1 }}
             transition={{ duration: 0.5, type: "tween" }}
             className="app__profiles-item"
@@ -69,4 +69,8 @@ function About() {
   );
 }
 
-export default AppWrap(About, "about");
+export default AppWrap(
+  MotionWrap(About, "app__about"),
+  "about",
+  "app__whitebg"
+);
