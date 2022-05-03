@@ -3,6 +3,8 @@ import "./Header.scss";
 import { motion } from "framer-motion";
 import { images } from "../../constants";
 import { AppWrap } from "../../wrapper";
+import { AiOutlineFilePdf } from "react-icons/ai";
+import { BsFileEarmarkPdf } from "react-icons/bs";
 
 const scaleVariants = {
   whileInView: {
@@ -35,6 +37,10 @@ function Header() {
             <p className="p-text">web developer</p>
             <p className="p-text"> Freelancer</p>
           </div>
+
+          <button className="tag-cmp app__flex border">
+            <BsFileEarmarkPdf /> My resume / CV
+          </button>
         </div>
       </motion.div>
 
