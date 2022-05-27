@@ -26,7 +26,7 @@ function Work() {
       if (item === "All") {
         setFilterWork(work);
       } else {
-        setFilterWork(work.filter((work) => work.workType == item));
+        setFilterWork(work.filter((work) => work.tags[0] == item));
       }
     }, 500);
   };
@@ -34,23 +34,21 @@ function Work() {
     <>
       <h2 className="head-text">
         {" "}
-        I know that <span>Good Apps</span>means <span>Good Design</span>
+        I know that <span>Good Apps </span>means <span>Good Design</span>
         <br />
       </h2>
       <div className="app__work-filter">
-        {["UI/UX", "Web App", "Mobile App", "React JS", "All"].map(
-          (item, index) => (
-            <div
-              key={index}
-              onClick={() => handleWorkFilter(item)}
-              className={` app__work-filter-item app__flex ${
-                activeFilter === item ? "item-active" : ""
-              }`}
-            >
-              {item}
-            </div>
-          )
-        )}
+        {["HTML/CSS", "Next JS", "React JS", "All"].map((item, index) => (
+          <div
+            key={index}
+            onClick={() => handleWorkFilter(item)}
+            className={` app__work-filter-item app__flex ${
+              activeFilter === item ? "item-active" : ""
+            }`}
+          >
+            {item}
+          </div>
+        ))}
       </div>
       <motion.div
         animate={animateCard}
@@ -85,7 +83,7 @@ function Work() {
                     <AiFillEye />
                   </motion.div>
                 </a>
-                <a href={work.projectLink} target="_blank">
+                <a href={work.codeLink} target="_blank">
                   <motion.div
                     whileInView={{ scale: [0, 1] }}
                     whileHover={{ opacity: [1, 0.9] }}

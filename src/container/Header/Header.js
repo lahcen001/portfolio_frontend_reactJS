@@ -34,11 +34,16 @@ function Header() {
           </div>
 
           <div className="tag-cmp app__flex">
-            <p className="p-text">web developer</p>
+            <p className="p-text">Web developer</p>
             <p className="p-text"> Freelancer</p>
           </div>
 
-          <button className="tag-cmp app__flex border">
+          <button
+            className="tag-cmp app__flex border"
+            onClick={() =>
+              window.open("http://lahcen.click/lahcen_resume.pdf", "_blank")
+            }
+          >
             <BsFileEarmarkPdf /> My resume / CV
           </button>
         </div>

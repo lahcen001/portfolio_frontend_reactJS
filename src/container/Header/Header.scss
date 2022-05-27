@@ -222,5 +222,9 @@
 }
 .border{
   border :0px;
-
+  &:hover {
+    background-color: var(--secondary-color);
+    color:white
+  }
+  cursor: pointer;
 }
