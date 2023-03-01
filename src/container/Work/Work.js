@@ -38,7 +38,11 @@ function Work() {
         <br />
       </h2>
       <div className="app__work-filter">
+<<<<<<< HEAD
         {["HTML/CSS", "Next JS", "React JS","Angular","WordPress", "All"].map((item, index) => (
+=======
+        {["HTML/CSS", "Next JS", "React JS","Angular", "All"].map((item, index) => (
+>>>>>>> 743dd69ef5b173c1262e7cf140db7b19a10a7628
           <div
             key={index}
             onClick={() => handleWorkFilter(item)}
