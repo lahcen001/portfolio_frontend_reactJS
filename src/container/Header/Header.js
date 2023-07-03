@@ -41,7 +41,7 @@ function Header() {
           <button
             className="tag-cmp app__flex border"
             onClick={() =>
-              window.open("http://lahcen.click/lahcen_resume.pdf", "_blank")
+              window.open("https://resume.lahcen.click", "_blank")
             }
           >
             <BsFileEarmarkPdf /> My resume / CV

@@ -30,7 +30,7 @@ const Footer = () => {
 
     emailjs
       .sendForm(
-        "service_gkr3cbq",
+        "service_y3rytrh",
         "template_8quf5se",
         e.target,
         "uZkU8oEQds4EJtOh4"
